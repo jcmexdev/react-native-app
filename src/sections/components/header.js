@@ -15,10 +15,11 @@ const Header = (props) => {
                     <Image
                         source={require('../../../assets/logo.png')}
                         style={styles.logo} />
+                    <View>
+                        {props.children}
+                    </View>
                 </View>
-                <View>
-                    { props.children }
-                </View>
+
             </SafeAreaView>
         </View>
     );
@@ -31,7 +32,10 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     container: {
-        padding: 10
+        padding: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     }
 });
 
