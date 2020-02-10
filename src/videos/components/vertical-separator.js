@@ -7,8 +7,7 @@ import {
 
 const VerticalSeparator = (props) => {
     return (
-        <View style={[styles.separator, { borderTopColor: props.color ? props.color : 'black' }]}>
-            <Text>Esto es un separador</Text>
+        <View style={[styles.separator, { borderTopColor: props.color ? props.color : '#BDBDBD' }]}>
         </View>
     );
 }
