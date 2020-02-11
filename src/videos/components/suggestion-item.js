@@ -11,8 +11,8 @@ const SuggestionItem = (props) => {
         <View style={styles.container} key={props.id}>
             <View style={styles.left}>
                 <Image style={styles.cover}
-                    source={{ uri: 'https://via.placeholder.com/100x100' }} />
-                <Text style={styles.genre}>Genero</Text>
+                    source={{ uri: props.medium_cover_image }} />
+                <Text style={styles.genre}>{props.genres[0]}</Text>
             </View>
             <View style={styles.right}>
                 <Text style={styles.title}>{props.title}</Text>

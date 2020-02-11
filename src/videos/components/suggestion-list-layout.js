@@ -17,7 +17,6 @@ const SuggestionListLayout = (props) => {
 const styles = StyleSheet.create({
     container: {
         paddingVertical: 10,
-        flex: 1
     },
     title:{ 
         fontSize: 20,
