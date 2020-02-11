@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import SuggestionListLayout from '../components/suggestion-list-layout';
 import ListEmpty from '../components/list-empty';
-import VerticalSeparator from '../components/vertical-separator.js';
+import VerticalSeparator from '../../sections/components/vertical-separator';
 import SuggestionItem from '../components/suggestion-item';
 
 class SuggestionList extends Component {

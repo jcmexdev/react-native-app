@@ -2,7 +2,8 @@ import React from 'react';
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    ScrollView
 } from 'react-native';
 
 const SuggestionListLayout = (props) => {
@@ -16,9 +17,12 @@ const SuggestionListLayout = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: 10,
+        paddingTop
+        : 10,
+        flex:1
     },
-    title:{ 
+    title: {
+        color: '#4c4c4c',
         fontSize: 20,
         marginBottom: 10,
         fontWeight: 'bold',
