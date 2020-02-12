@@ -14,13 +14,13 @@ const PlayerLayout = (props) => (
                 props.loading && props.loader
             }
         </View>
+        {props.constrols}
     </View>
 );
 
 const styles = StyleSheet.create({
     container: {
         paddingTop: '56.25%',
-
     },
     video: {
         backgroundColor: 'black',
