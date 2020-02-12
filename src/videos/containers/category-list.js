@@ -10,14 +10,14 @@ import CategoryItem from '../components/category-item';
 import CategoryListLayout from '../components/category-list-layout';
 
 class CategoryList extends Component {
-    renderEmpty = () => <ListEmpty text="No hay categorías :(" />
-    keyExtractor = item => item.id.toString()
+    renderEmpty = () => <ListEmpty text="No hay categorías :(" />;
+    keyStractor = item => item.id.toString();
 
     render() {
         return <CategoryListLayout title="Lista de categorías">
             <FlatList
+                keyExtractor={this.keyStractor}
                 horizontal={true}
-                keyExtractor={this.ketExtractor}
                 data={this.props.list}
                 ListEmptyComponent={this.renderEmpty}
                 ItemSeparatorComponent={() => <HorizontalSeparator />}

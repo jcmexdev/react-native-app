@@ -13,11 +13,12 @@ import Header from './src/sections/components/header';
 import SuggestionList from './src/videos/containers/suggestion-list';
 import CategoryList from './src/videos/containers/category-list';
 import Api from './utils/api';
+import Player from './src/player/containers/player';
 
 class App extends Component {
   state = {
-    suggestionList:[],
-    categoriesList:[]
+    suggestionList: [],
+    categoriesList: []
   }
 
   async componentDidMount() {
@@ -32,9 +33,8 @@ class App extends Component {
   render() {
     return (
       <Home>
-        <Header>
-          <Text>Child</Text>
-        </Header>
+        <Header />
+        <Player />
         <Text>Search</Text>
         <Text>Categories</Text>
         <CategoryList list={this.state.categoriesList} />
