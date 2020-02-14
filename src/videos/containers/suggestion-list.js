@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import {
-  FlatList,
-  Text
-} from 'react-native';
+import { FlatList, Text } from 'react-native';
 import SuggestionListLayout from '../components/suggestion-list-layout';
 import ListEmpty from '../components/list-empty';
 import VerticalSeparator from '../../sections/components/vertical-separator';
 import SuggestionItem from '../components/suggestion-item';
+import { connect } from 'react-redux';
 
 class SuggestionList extends Component {
   renderEmpty = () => <ListEmpty text="No hay sugerencias :(" />;
@@ -15,7 +13,7 @@ class SuggestionList extends Component {
 
   render() {
     return (
-      <SuggestionListLayout title="Recomendado para ti" >
+      <SuggestionListLayout title="Recomendado para ti">
         <FlatList
           keyExtractor={this.keyStractor}
           data={this.props.list}
@@ -28,4 +26,10 @@ class SuggestionList extends Component {
   }
 }
 
-export default SuggestionList;
+const mapStateToProps = state => {
+  return {
+    list: state.suggestionList,
+  };
+};
+
+export default connect(mapStateToProps)(SuggestionList);

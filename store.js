@@ -1,6 +1,11 @@
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 import reducer from './reducers/videos';
 
-const store = createStore(reducer, {key: 'value'});
+const initialState = {
+  suggestionList: [],
+  categoryList: [],
+};
+
+const store = createStore(reducer, initialState);
 
 export default store;

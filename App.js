@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Text} from 'react-native';
+import React, { Component } from 'react';
+import { Text } from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
 import SuggestionList from './src/videos/containers/suggestion-list';
@@ -15,24 +15,19 @@ import CategoryList from './src/videos/containers/category-list';
 import Api from './utils/api';
 import Player from './src/player/containers/player';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store';
+import { SET_CATEGORY_LIST, SET_SUGGESTION_LIST } from './actions/actions';
 
 class App extends Component {
-  state = {
-    suggestionList: [],
-    categoriesList: [],
-  };
-
   async componentDidMount() {
     Icon.loadFont();
-    const suggestions = await Api.getSuggestions(3);
-    const categories = await Api.getMovies();
 
-    this.setState({
-      suggestionList: suggestions,
-      categoriesList: categories,
-    });
+    const categories = await Api.getMovies();
+    store.dispatch(SET_CATEGORY_LIST(categories));
+
+    const suggestions = await Api.getSuggestions(3);
+    store.dispatch(SET_SUGGESTION_LIST(suggestions));
   }
   render() {
     return (
@@ -42,8 +37,8 @@ class App extends Component {
           <Player />
           <Text>Search</Text>
           <Text>Categories</Text>
-          <CategoryList list={this.state.categoriesList} />
-          <SuggestionList list={this.state.suggestionList} />
+          <CategoryList />
+          <SuggestionList />
         </Home>
       </Provider>
     );
