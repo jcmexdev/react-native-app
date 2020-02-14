@@ -15,6 +15,8 @@ import CategoryList from './src/videos/containers/category-list';
 import Api from './utils/api';
 import Player from './src/player/containers/player';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Provider} from 'react-redux';
+import store from './store';
 
 class App extends Component {
   state = {
@@ -34,14 +36,16 @@ class App extends Component {
   }
   render() {
     return (
-      <Home>
-        <Header />
-        <Player />
-        <Text>Search</Text>
-        <Text>Categories</Text>
-        <CategoryList list={this.state.categoriesList} />
-        <SuggestionList list={this.state.suggestionList} />
-      </Home>
+      <Provider store={store}>
+        <Home>
+          <Header />
+          <Player />
+          <Text>Search</Text>
+          <Text>Categories</Text>
+          <CategoryList list={this.state.categoriesList} />
+          <SuggestionList list={this.state.suggestionList} />
+        </Home>
+      </Provider>
     );
   }
 }

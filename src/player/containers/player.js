@@ -5,7 +5,7 @@ import PlayPause from '../../player/components/play-pause';
 import Volume from '../components/volume';
 import FullScreen from '../components/full-screen';
 import ProgressBar from '../components/progressbar';
-import {ActivityIndicator, StyleSheet, Platform} from 'react-native';
+import {ActivityIndicator, StyleSheet} from 'react-native';
 import Video from 'react-native-video';
 
 class Player extends Component {
