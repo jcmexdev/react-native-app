@@ -16,8 +16,9 @@ import Api from './utils/api';
 import Player from './src/player/containers/player';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Provider } from 'react-redux';
-import store from './store';
+import { store, persistor } from './store';
 import { SET_CATEGORY_LIST, SET_SUGGESTION_LIST } from './actions/actions';
+import { PersistGate } from 'redux-persist/integration/react';
 
 class App extends Component {
   async componentDidMount() {
@@ -32,14 +33,16 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Home>
-          <Header />
-          <Player />
-          <Text>Search</Text>
-          <Text>Categories</Text>
-          <CategoryList />
-          <SuggestionList />
-        </Home>
+        <PersistGate persistor={persistor}>
+          <Home>
+            <Header />
+            <Player />
+            <Text>Search</Text>
+            <Text>Categories</Text>
+            <CategoryList />
+            <SuggestionList />
+          </Home>
+        </PersistGate>
       </Provider>
     );
   }
