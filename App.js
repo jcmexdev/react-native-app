@@ -19,6 +19,7 @@ import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { SET_CATEGORY_LIST, SET_SUGGESTION_LIST } from './actions/actions';
 import { PersistGate } from 'redux-persist/integration/react';
+import Loading from './src/sections/components/loading';
 
 class App extends Component {
   async componentDidMount() {
@@ -33,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <PersistGate persistor={persistor}>
+        <PersistGate persistor={persistor} loading={<Loading />}>
           <Home>
             <Header />
             <Player />
