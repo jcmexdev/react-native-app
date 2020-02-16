@@ -13,7 +13,25 @@ export const SET_CATEGORY_LIST = categoryList => {
   return {
     type: actionTypes.SET_CATEGORY_LIST,
     payload: {
-        categoryList
+      categoryList,
+    },
+  };
+};
+
+export const SET_SELECTED_MOVIE = movie => {
+  return {
+    type: actionTypes.SET_SELECTED_MOVIE,
+    payload: {
+      selectedMovie: movie,
+    },
+  };
+};
+
+export const REMOVE_SELECTED_MOVIE = () => {
+  return {
+    type: actionTypes.REMOVE_SELECTED_MOVIE,
+    payload: {
+      selectedMovie: null,
     },
   };
 };

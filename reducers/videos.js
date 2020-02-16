@@ -8,6 +8,12 @@ function videos(state = {}, action) {
     case actionTypes.SET_SUGGESTION_LIST: {
       return { ...state, ...action.payload };
     }
+    case actionTypes.SET_SELECTED_MOVIE: {
+      return { ...state, ...action.payload };
+    }
+    case actionTypes.REMOVE_SELECTED_MOVIE: {
+      return { ...state, ...action.payload };
+    }
     default:
       return state;
   }
