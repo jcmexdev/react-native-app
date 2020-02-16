@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const Details = props => {
   return (
-    <View>
+    <ScrollView>
       <View style={styles.top}>
         <Text style={styles.title}>{props.title}</Text>
       </View>
@@ -15,8 +16,13 @@ const Details = props => {
           />
           <Text style={styles.description}>{props.description_full}</Text>
         </View>
+        <View style={styles.trailer}>
+          <WebView
+            source={{ uri: 'https://www.youtube.com/embed/q4ILI9Au_Ok' }}
+          />
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

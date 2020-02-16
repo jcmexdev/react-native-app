@@ -77,7 +77,7 @@ class Api {
         year: 1990,
         rating: 4,
         description_full:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 2,
