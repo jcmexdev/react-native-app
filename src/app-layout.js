@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { connect } from 'react-redux';
 import { SET_CATEGORY_LIST, SET_SUGGESTION_LIST } from '../actions/actions';
 import Movie from './screens/containers/movie';
+import Search from './sections/containers/search';
 
 class AppLayout extends React.Component {
   async componentDidMount() {
@@ -28,7 +29,7 @@ class AppLayout extends React.Component {
     return (
       <Home>
         <Header />
-        <Text>Search</Text>
+        <Search />
         <CategoryList />
         <SuggestionList />
       </Home>

@@ -18,7 +18,9 @@ const Details = props => {
         </View>
         <View style={styles.trailer}>
           <WebView
-            source={{ uri: 'https://www.youtube.com/embed/q4ILI9Au_Ok' }}
+            source={{
+              uri: `https://www.youtube.com/embed/${props.yt_trailer_code}`,
+            }}
           />
         </View>
       </View>

@@ -1,5 +1,5 @@
 const BASE_API = 'https://yts.mx/api/v2/';
-const OFFLINE_MODE = true;
+const OFFLINE_MODE = false;
 
 class Api {
   async getSuggestions(id) {
@@ -138,6 +138,19 @@ class Api {
       .then(response => response.data.movies)
       .catch(error => {
         console.log(`Ocurrio un error al cargar las peliculas: ${error}`);
+      });
+  }
+
+  async searchMovieByTitle(title) {
+    return await fetch(
+      `${BASE_API}/list_movies.json?limit=1&short_by=rating&query_term=${title}`,
+    )
+      .then(response => response.json())
+      .then(response => response.data.movies || [])
+      .catch(error => {
+        console.log(
+          `Ocurrio un error al buscar la pelicula por titulo: ${error}`,
+        );
       });
   }
 }
