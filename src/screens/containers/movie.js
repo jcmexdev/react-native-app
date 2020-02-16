@@ -5,6 +5,7 @@ import Player from '../../player/containers/player';
 import Close from '../components/close';
 import { connect } from 'react-redux';
 import { REMOVE_SELECTED_MOVIE } from '../../../actions/actions';
+import Details from '../../videos/components/details';
 
 class Movie extends React.Component {
   closeVideo = () => {
@@ -18,9 +19,15 @@ class Movie extends React.Component {
           <Close onPress={this.closeVideo} />
         </Header>
         <Player />
+        <Details {...this.props.selectedMovie} />
       </MovieLayout>
     );
   }
 }
 
-export default connect(null)(Movie);
+const mapStateToProps = state => {
+  return {
+    selectedMovie: state.selectedMovie,
+  };
+};
+export default connect(mapStateToProps)(Movie);

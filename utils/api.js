@@ -12,6 +12,8 @@ class Api {
         title: 'other title',
         year: 2007,
         rating: 2,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 2,
@@ -20,6 +22,8 @@ class Api {
         title: 'elementum',
         year: 1994,
         rating: 4,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 3,
@@ -28,6 +32,8 @@ class Api {
         title: 'nullam',
         year: 1993,
         rating: 2,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 4,
@@ -36,6 +42,8 @@ class Api {
         title: 'luctus et',
         year: 2010,
         rating: 3,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 5,
@@ -44,6 +52,8 @@ class Api {
         title: 'montes nascetur',
         year: 2009,
         rating: 4,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
     ];
     if (OFFLINE_MODE) {
@@ -66,6 +76,8 @@ class Api {
         title: 'lectus suspendisse',
         year: 1990,
         rating: 4,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 2,
@@ -74,6 +86,8 @@ class Api {
         title: 'erat eros',
         year: 1996,
         rating: 4,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 3,
@@ -82,6 +96,8 @@ class Api {
         title: 'vivamus',
         year: 2009,
         rating: 4,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 4,
@@ -90,6 +106,8 @@ class Api {
         title: 'eget',
         year: 1995,
         rating: 3,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 5,
@@ -98,6 +116,8 @@ class Api {
         title: 'dictumst morbi',
         year: 1994,
         rating: 3,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
       {
         id: 6,
@@ -106,6 +126,8 @@ class Api {
         title: 'faucibus orci',
         year: 2003,
         rating: 5,
+        description_full:
+          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita alias est nostrum quis omnis quidem placeat solut',
       },
     ];
     if (OFFLINE_MODE) {
